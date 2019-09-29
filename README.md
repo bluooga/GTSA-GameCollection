@@ -9,7 +9,7 @@ The TSA Club is a club based around technology we participate in Robotics, Game 
 In 2017/2018 school year Jesus Diaz and Joel Cortez among others in the club wanted to create and arcade machine
 the project then begun porduction however they had little game programing experience
 
-in 2018/2019 Fabian Sales joined the club and expressed desire to do the same, he quickly learned C# programming and began programing the game, now here we are on the verge of launching the arcade machine in the school.
+in 2018/2019 Fabian Sales joined the club and expressed desire to do the same, he quickly learned C# programing and began programing the game, now here we are on the verge of launching the arcade machine in the school.
 
 # usage of this game
 the game is completely open source any code can be reused or used as needed, the only thing we ask is you credit us for the original code
