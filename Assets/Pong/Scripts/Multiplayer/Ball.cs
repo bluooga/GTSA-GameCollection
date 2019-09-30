@@ -35,7 +35,8 @@ public class Ball : MonoBehaviour
     void Start()
     {
         StartCoroutine(startTime());
-        ballSpeed = ballBaseSpeed;
+        ballSpeed = PongOptions.bsSpeed;
+        acceleration = PongOptions.accel;
     }
 
     // Update is called once per frame

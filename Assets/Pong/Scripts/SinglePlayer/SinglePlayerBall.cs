@@ -7,6 +7,7 @@ public class SinglePlayerBall : MonoBehaviour
     //private variables
     Vector3 ballVelocity;
     Rigidbody rbb;
+    Renderer rend;
     public GameObject GameManager;
     public GameObject ScoreBoard;
     //public GameObject GameManager;
@@ -23,13 +24,15 @@ public class SinglePlayerBall : MonoBehaviour
     private void Awake()
     {
         rbb = GetComponent<Rigidbody>();
+        rend = GetComponent<Renderer>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(startTime());
-        ballSpeed = ballBaseSpeed;
+        ballSpeed = PongOptions.bsSpeed;
+        acceleration = PongOptions.accel;
     }
 
     // Update is called once per frame
@@ -92,6 +95,7 @@ public class SinglePlayerBall : MonoBehaviour
             //ballSpeed += acceleration;
             Time.timeScale += acceleration;
             Debug.Log("hit Top Barrier");
+            collision.gameObject.GetComponent<Renderer>().material.color = rend.material.color;
         }
         //BottomBarrierCollision
         if (collision.gameObject.CompareTag("BottomBarrier"))
@@ -100,6 +104,7 @@ public class SinglePlayerBall : MonoBehaviour
             //ballSpeed += acceleration;
             Time.timeScale += acceleration;
             Debug.Log("hit Bottom Barrier");
+            collision.gameObject.GetComponent<Renderer>().material.color = rend.material.color;
         }
         //RightBarrierCollision / Goal Right
         if (collision.gameObject.CompareTag("RightBarrier"))

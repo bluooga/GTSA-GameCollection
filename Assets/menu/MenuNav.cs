@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MenuNav : MonoBehaviour
 {
+    //public Scene PongSinglePlayer;
+    //public Scene MultiplayerPong;
     public GameObject scoreBoard;
+    public GameObject pongOptions;
     public string currentScene;
+    
 
     [SerializeField] public GameObject[] screens;
 
@@ -22,24 +26,28 @@ public class MenuNav : MonoBehaviour
 
     public void PongStartGame()
     {
-
+        if (pongOptions.GetComponent<PongOptions>().gamemodenumber == 0)
+        {
+            SceneManager.LoadScene(1);
+        }else if(pongOptions.GetComponent<PongOptions>().gamemodenumber == 1)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 
     public void PongMultiPlayerRematch()
     {
         scoreBoard.GetComponent<ScoreBoard>().Player1Score = 0;
         scoreBoard.GetComponent<ScoreBoard>().Player2Score = 0;
-        currentScene = SceneManager.GetActiveScene().name;
         Debug.Log("buttonPressed");
-        SceneManager.LoadScene(currentScene);
+        SceneManager.LoadScene(2);
         Time.timeScale = 1f;
     }
 
     public void SPPongRetry()
     {
-        currentScene = SceneManager.GetActiveScene().name;
         Debug.Log("buttonPressed");
-        SceneManager.LoadScene(currentScene);
+        SceneManager.LoadScene(1);
         Time.timeScale = 1f;
     }
 

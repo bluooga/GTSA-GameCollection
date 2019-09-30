@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 369e1ffc42f791043ae846324b9e52fa
   - enabled: 1
-    path: Assets/Scenes/2PPong.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/VsSelfPong.unity
+    guid: 95d5a38fb625edc4db552702905cd182
+  - enabled: 1
+    path: Assets/Scenes/MultiPlayerPong.unity
+    guid: 179a4f67d1f99db498c36c30dbe3f271
   m_configObjects: {}
